@@ -1,7 +1,7 @@
 # Cybersecurity Club Assignment
 This is my submission for the recruitment assignment of Cybersecurity Club IITB
  
-##Details
+## Details
 1. Email id - jayesh11.3.01@gmail.com
 2. Name - Jayesh Singla
 3. Department - CSE (going into 2nd year)
