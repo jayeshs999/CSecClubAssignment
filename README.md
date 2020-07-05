@@ -6,7 +6,7 @@ This is my submission for the recruitment assignment of Cybersecurity Club IITB
 2. Name - Jayesh Singla
 3. Department - CSE (going into 2nd year)
 
-I took part in my first CTF a few days ago. Though I could solve only one problem, it was fun trying out different approaches to extract hidden information. I feel being part of this club will help me learn and explore this field more as a team and contribute to widen interest this field in the institute.    
+I took part in my first CTF a few days ago. Though I could solve only one problem, it was fun trying out different approaches to extract hidden information. I feel being part of this club will help me learn and explore this field more as a team and contribute to widen interest in this field in the institute.    
 
 ## Task 1
 It was a very "creative problem"
