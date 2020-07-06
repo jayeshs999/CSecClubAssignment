@@ -24,6 +24,6 @@ This took a lot of time. First I had to understand every piece of PHP syntax and
 The password is in [here](task3/password.txt)
 
 ## Task 4(incomplete)
-I first opened the friday.pcap file using Wireshark. I looked at the type of protocols present. I found a deauthentication protocol so it looked like it could have something to do with password, but alas nothing. Then I thought of using 'strings' command on the file but the only meaningful string was something like 'DESKTOP-...'. Still searching for a way to use wordlist.txt file using some code.
+I first opened the friday.pcap file using Wireshark. I looked at the type of protocols present. I found a deauthentication protocol so it looked like it could have something to do with password, but alas nothing. Then I thought of using 'strings' command on the file but the only meaningful string was something like 'DESKTOP-...'.After further reading,I found a software called Hashcat which can perform dictionary attacks to crack the password from converted handshake file. But it required some configuration of OpenCL runtimes which were not supported on my OS(Ubuntu 18.04LTS). I'm pretty sure it will be able to crack the password.
 
 
