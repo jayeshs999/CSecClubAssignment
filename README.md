@@ -14,17 +14,30 @@ It was a very "creative problem".First I looped over all possible 3-byte combina
 The answer is in [here](task1/answer.txt)
 
 ## Task 2
-Had to write some code to solve the problems.First I thought if the numbers and symbols were encoded in some way but looking at the length of the lines in the file,I rejected this possibility. Then I observed that there were groups of 7 lines. Then I saw there were repeating patterns in all the groups.I replaced the zeros with " " " and voila!,I saw the equations.There were too many to solve by hand so I extracted the equations as strings into [easy.txt](task2/easy.txt) using the [decode.py](task2/decode.py) script. Then used the [solve.py](task2/solve.py) script to solve each equation individually.
+Had to write some code to solve the problems.First I thought if the numbers and symbols were encoded in some way but looking at the length of the lines in the file,I rejected this possibility. 
+
+Then I observed that there were groups of 7 lines. Then I saw there were repeating patterns in all the groups.I replaced the zeros with " " " and voila!,I saw the equations.
+
+There were too many to solve by hand so I extracted the equations as strings into [easy.txt](task2/easy.txt) using the [decode.py](task2/decode.py) script. Then used the [solve.py](task2/solve.py) script to solve each equation individually.
 
 The answers are in [here](task2/answers.txt) 
 
 ## Task 3
-This took a lot of time. First I had to understand every piece of PHP syntax and functions in the source code. After that I thought if I could somehow intercept the query result using some software but couldn't do much progress in that direction. Then I found out about 'SQL Injection'. After reading some more, I found regexps could be used in queries. After that, I just injected a REGEXP condition on password in the query with username="admin". I kept looping over a dictionary of characters and kept generating a prefix of the password. Lastly, I performed a check after every addition of a character if I had found the correct password. This was done by injecting a simple password = "..." condition in the query.
+This took a lot of time. 
+First I had to understand every piece of PHP syntax and functions in the source code. After that I thought if I could somehow intercept the query result using some software but couldn't do much progress in that direction. 
+
+Then I found out about 'SQL Injection'. After reading some more, I found regexps could be used in queries. After that, I just injected a REGEXP condition on password in the query with username="admin". 
+
+I kept looping over a dictionary of characters and kept generating a prefix of the password. Lastly, I performed a check after every addition of a character if I had found the correct password. This was done by injecting a simple password = "..." condition in the query.
 
 The password is in [here](task3/password.txt)
 
 ## Task 4
-I first opened the friday.pcap file using Wireshark. I looked at the type of protocols present. I found a deauthentication protocol so it looked like it could have something to do with password, but alas nothing. Then I thought of using 'strings' command on the file but the only meaningful string was something like 'DESKTOP-...'.After further reading,I found a software called Hashcat which can perform dictionary attacks to crack the password from converted handshake file. But it required some configuration of OpenCL runtimes which were not supported on my OS(Ubuntu 18.04LTS).So I used another software called John-The-Ripper and it gave me a password. I don't have a full idea of what happened here and will continue reading about it. My current understanding is that wifi passswords are encryted using some encryption techniques which are difficult to reverse. Therefore, softwares like Hashcat(while doing a dictionary attack) apply different encryption techniques to a set of words(the wordlist) and see if the encrypted output matches.
+I first opened the friday.pcap file using Wireshark. I looked at the type of protocols present. I found a deauthentication protocol so it looked like it could have something to do with password, but alas nothing. Then I thought of using 'strings' command on the file but the only meaningful string was something like 'DESKTOP-...'.
+
+After further reading,I found a software called Hashcat which can perform dictionary attacks to crack the password from converted handshake file. But it required some configuration of OpenCL runtimes which were not supported on my OS(Ubuntu 18.04LTS).
+
+So I used another software called John-The-Ripper and it gave me a password. I don't have a full idea of what happened here and will continue reading about it. My current understanding is that wifi passswords are encryted using some encryption techniques which are difficult to reverse. Therefore, softwares like Hashcat(while doing a dictionary attack) apply different encryption techniques to a set of words(the wordlist) and see if the encrypted output matches.
 
 Anyways, my answer is [here](task4/password.txt)
 
