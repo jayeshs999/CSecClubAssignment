@@ -22,7 +22,7 @@ There were too many to solve by hand so I extracted the equations as strings int
 
 The answers are in [here](task2/answers.txt) 
 
-(The code in solve.py was taken from [here](https://www.geeksforgeeks.org/expression-evaluation/)
+(The code in solve.py was taken from [here](https://www.geeksforgeeks.org/expression-evaluation/))
 
 ## Task 3
 This took a lot of time. 
